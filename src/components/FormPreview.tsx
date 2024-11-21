@@ -19,7 +19,7 @@ interface JSONSchema {
 }
 
 const FormPreview: React.FC<{ jsonSchema: string }> = ({ jsonSchema }) => {
-  const { register, handleSubmit, formState: { errors }, setValue } = useForm();
+  const { register, handleSubmit, formState: { errors }} = useForm();
   const ajv = new Ajv();
 
   const [submittedData, setSubmittedData] = useState<Record<string, any> | null>(null);
